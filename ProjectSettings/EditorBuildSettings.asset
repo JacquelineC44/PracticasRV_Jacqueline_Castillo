@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/PrevioVR_Jacqueline_Castillo.unity
     guid: ccce588b6a054904fb8a294173f2be72
+  - enabled: 1
+    path: Assets/Practica2_Jacqueline_Castillo.unity
+    guid: 12a25563a35fbbc4dad1d7b90dbfc672
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 3f40ce5ff54fc0e47bd668f87a237108, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ce2e8151c61c70b45a1cd02be438de4b, type: 2}
