@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: ninguna
-  productName: com.Castillo.Practica2_Jacqueline
+  productName: com.Castillo.Practica3_Jacqueline
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -144,6 +144,7 @@ PlayerSettings:
   bundleVersion: 0.1
   preloadedAssets:
   - {fileID: 11400000, guid: eec24f3679ee0e5469a953aa27f95bd1, type: 2}
+  - {fileID: -944628639613478452, guid: 3732c9f8b3da313498c62b15939d78c9, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -164,7 +165,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.Castillo.Practica2_Jacqueline
+    Android: com.Castillo.Practica3_Jacqueline
   buildNumber:
     Standalone: 0
     VisionOS: 0
