@@ -68,6 +68,17 @@
                 },
                 {
                     "name": "",
+                    "id": "efea37f3-b14d-48eb-9ab2-c3e800dde930",
+                    "path": "<OculusTouchController>/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "5d489416-145c-4a51-89f4-940e34cff074",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -81,6 +92,17 @@
                     "name": "",
                     "id": "561bdfc3-6f7c-4a93-845a-dba2fc0d6a73",
                     "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "16612d00-45b7-43fe-9777-d8e07e383633",
+                    "path": "<OculusTouchController>/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
