@@ -62,7 +62,9 @@ public class Move : MonoBehaviour
         characterController.Move(move * currentSpeed * Time.deltaTime);
         float rotation = rotateInput * rotationSpeed * Time.deltaTime;
         transform.Rotate(0, rotation, 0);
+
         velocity.y += gravity * Time.deltaTime;
+
         characterController.Move(velocity*Time.deltaTime);
 
     }
