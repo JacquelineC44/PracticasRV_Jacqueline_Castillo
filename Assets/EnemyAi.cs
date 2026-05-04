@@ -1,34 +1,13 @@
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-//using UnityEngine.AI;
-
-//public class EnemyAi : MonoBehaviour
-//{
-//    public Transform Player;
-//    private NavMeshAgent agent;
-//    Start is called before the first frame update
-//    void Start()
-//    {
-//        agent = GetComponent<NavMeshAgent>();
-//    }
-
-//    Update is called once per frame
-//    void Update()
-//    {
-//        if (Player != null)
-//        {
-//            agent.SetDestination(Player.position);
-//        }
-
-//    }
-//}
 using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyAi : MonoBehaviour
 {
     public Transform player;
+
+    [Header("Velocidades")]
+    public float patrolSpeed = 2f;
+    public float chaseSpeed = 5f;
 
     [Header("Patrulla")]
     public Transform[] patrolPoints;
@@ -46,18 +25,17 @@ public class EnemyAi : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        agent.speed = patrolSpeed;
 
         if (patrolPoints.Length > 0)
-        {
             agent.SetDestination(patrolPoints[currentPoint].position);
-        }
     }
 
     void Update()
     {
         if (CanSeePlayer())
         {
-            agent.SetDestination(player.position);
+            ChasePlayer();
         }
         else
         {
@@ -65,8 +43,18 @@ public class EnemyAi : MonoBehaviour
         }
     }
 
+    void ChasePlayer()
+    {
+        agent.speed = chaseSpeed;
+        agent.isStopped = false;
+        agent.SetDestination(player.position);
+    }
+
     void Patrol()
     {
+        agent.speed = patrolSpeed;
+        agent.isStopped = false;
+
         if (patrolPoints.Length == 0) return;
 
         if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
@@ -86,7 +74,8 @@ public class EnemyAi : MonoBehaviour
     {
         if (player == null) return false;
 
-        Vector3 directionToPlayer = player.position - transform.position;
+        Vector3 origin = transform.position + Vector3.up;
+        Vector3 directionToPlayer = player.position - origin;
         float distanceToPlayer = directionToPlayer.magnitude;
 
         if (distanceToPlayer > viewDistance)
@@ -97,15 +86,9 @@ public class EnemyAi : MonoBehaviour
         if (angle > viewAngle / 2)
             return false;
 
-        if (Physics.Raycast(transform.position + Vector3.up, directionToPlayer.normalized, out RaycastHit hit, viewDistance))
-        {
-            if (hit.transform == player)
-            {
-                return true;
-            }
-        }
+        if (Physics.Raycast(origin, directionToPlayer.normalized, distanceToPlayer, obstacleMask))
+            return false;
 
-        return false;
+        return true;
     }
 }
-
