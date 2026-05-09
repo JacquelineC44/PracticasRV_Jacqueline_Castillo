@@ -308,6 +308,17 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""5d549ee0-395e-469e-862c-013c93ff1fb2"",
+                    ""path"": ""<XRController>{LeftHand}/{Primary2DMotion}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""1e6462a4-50e2-414b-a0f8-550d2d7429fc"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
@@ -341,8 +352,19 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8eff7961-d5ff-489f-9231-7aed34107451"",
+                    ""id"": ""cedd0fef-37f7-4880-8dc1-84ad28c83478"",
                     ""path"": ""<Gamepad>/rightStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8eff7961-d5ff-489f-9231-7aed34107451"",
+                    ""path"": ""<OculusTouchController>{RightHand}/thumbstick/x"",
                     ""interactions"": """",
                     ""processors"": ""Scale"",
                     ""groups"": """",
